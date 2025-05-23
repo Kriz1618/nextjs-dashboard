@@ -9,7 +9,16 @@ const nextConfig: NextConfig = {
     // Enable the OpenTelemetry integration
     // https://nextjs.org/docs/app/building-your-application/optimizing/open-telemetry#using-vercelotel
     // https://maxwellweru.com/blog/2024/03/nextjs-opentelemetry-with-azure-monitor
-  }
+  },
+  images: {
+    // domains: ['*', 'robohash.org'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**', // Matches any domain
+      },
+    ],
+  },
 };
 
 export default nextConfig;
